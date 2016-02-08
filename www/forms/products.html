@@ -1,0 +1,25 @@
+<div class="list">
+  <form name="form">
+    <label class="item item-input">
+        <span class="input-label">Nombre</span>
+        <input type="text" ng-model="$parent.product.name" required>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Precio</span>
+        <input type="number" ng-model="$parent.product.price">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Descripción</span>
+        <input type="text" ng-model="$parent.product.description">
+    </label>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Tienda
+      </div>
+      <select ng-model="$parent.product.shop">
+        <option ng-repeat="option in $parent.shops" value="{{option.id}}">{{option.name}}</option>
+      </select>
+    </label>
+    <button class="button button-calm button-block" ng-disabled="!form.$valid" ng-click="save(product)">Añadir</button>
+  </form>
+</div>

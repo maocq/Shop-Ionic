@@ -1,0 +1,13 @@
+<div class="list">
+  <form name="form">
+    <label class="item item-input">
+        <span class="input-label">Nombre</span>
+        <input type="text" ng-model="$parent.shop.name" required>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Ubicacion</span>
+        <input type="text" ng-model="$parent.shop.location">
+    </label>
+    <button class="button button-calm button-block" ng-disabled="!form.$valid" ng-click="save(shop)">Añadir</button>
+  </form>
+</div>

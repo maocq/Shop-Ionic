@@ -1,0 +1,19 @@
+<ion-view title="Detalle Tienda" ng-init="initShopDetail()">
+  <ion-content>
+      <div class="card">
+        <div class="item item-text-wrap">
+            <h2>{{shop.name}}</h2>
+            <small>{{shop.location}}</small>
+        </div>
+      </div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-icon-right" ng-repeat="product in shop.products" type="item-text-wrap" href="#/product/{{product.id}}">
+            <h2>{{product.name}}</h2>
+            <small>{{product.price}}</small>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+
+            <ion-option-button class="button-assertive" ng-click="remove(product.id)">Remove</button>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>
